@@ -11,29 +11,8 @@
 <body>
 	<div id="logo"><h1><a href="/">相信未来</a></h1></div>
 	<div id="wrapper">
-		<div id="content" class="index">
-			<div id="sidebar">
-				<ul>
-				<li>
-					<a href="#">ARTICLES</a>
-					<ul>
-						{% for category in site.categories %}
-						<li><a href="/{{ category[0]  }}.html"> {{ category[0]  }}</a></li>
-						{% endfor %}
-					</ul>
-				</li>
-				<li><a href="/quotes.html">QUOTES</a></li>
-				<li><a href="/projects.html">PROJECTS</a></li>
-				<li><a href="/about.html">ABOUT</a></li>
-				<li><a href="http://leezhong.com/resume/">RESUME</a></li>
-				<li><a href="/links.html">LINKS</a></li>
-				<li><a href="/contact.html">CONTACT</a></li>
-				</ul>
-			</div>
 				
-		<div id="main">
 		{{ content }}
-		</div>
 
 		<div id="footer">
 		<!-- 

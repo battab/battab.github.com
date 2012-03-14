@@ -2,11 +2,30 @@
 layout: default
 title: Believe in the future
 ---
+<div id="content" class="index">
+	<div id="sidebar">
+		<ul><li>
+			<a href="#">ARTICLES</a>
+			<ul>
+				{% for category in site.categories %}
+				<li><a href="/{{ category[0]  }}.html"> {{ category[0]  }}</a></li>
+				{% endfor %}
+			</ul>
+		</li>
+		<li><a href="/quotes.html">QUOTES</a></li>
+		<li><a href="/projects.html">PROJECTS</a></li>
+		<li><a href="/about.html">ABOUT</a></li>
+		<li><a href="http://leezhong.com/resume/">RESUME</a></li>
+		<li><a href="/links.html">LINKS</a></li>
+		<li><a href="/contact.html">CONTACT</a></li>
+		</ul>
+	</div>
 
-<ul class="posts">
+
+	<ul class="posts">
 		{% for post in site.posts %}
 		<li><p class="date" cate="{{ post.categories }}">{{ post.date | date:"%Y-%m-%d" }}</p> <a href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
-</ul>
+	</ul>
 
 </div>
